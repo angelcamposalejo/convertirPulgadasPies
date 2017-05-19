@@ -15,8 +15,9 @@ void Pies::btConvertir_Click(Win::Event& e)
 	const int pulgadas = tbxPulgadas.IntValue;
 	const int pies = pulgadas / 12;
 	const int pulgadas2 = pulgadas % 12;
-	tbxPies.IntValue = pies;
-	tbxPulgadas2.IntValue = pulgadas2;
+	wstring texto;
+	Sys::Format(texto, L"%i ft and %i in", pies, pulgadas2);
+	tbxPies.Text = texto;
 
 }
 
